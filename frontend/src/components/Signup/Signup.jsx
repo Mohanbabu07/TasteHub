@@ -42,6 +42,20 @@ const Singup = () => {
         toast.error(error.response.data.message);
       });
   };
+  const calculateStrength = (password) => {
+    let strength = 0;
+    if (password.length >= 8) strength++;
+    if (/[a-z]/.test(password)) strength++;
+    if (/[A-Z]/.test(password)) strength++;
+    if (/[0-9]/.test(password)) strength++;
+    if (/[^a-zA-Z0-9]/.test(password)) strength++;
+    return strength;
+  };
+  const renderStrengthMessage = (strength) => {
+    if (strength === 0) return "Weak";
+    if (strength === 1 || strength === 2) return "Moderate";
+    if (strength >= 3) return "Strong";
+  };
 
   return (
     <div className="min-h-screen bg-gray-50 flex flex-col justify-center py-12 sm:px-6 lg:px-8">
@@ -107,6 +121,7 @@ const Singup = () => {
                   autoComplete="current-password"
                   required
                   value={password}
+                  maxLength={10}
                   onChange={(e) => setPassword(e.target.value)}
                   className="appearance-none block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm placeholder-gray-400 focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm"
                 />
@@ -122,6 +137,12 @@ const Singup = () => {
                     size={25}
                     onClick={() => setVisible(true)}
                   />
+                )}
+                {password && (
+                  <div className="text-sm mt-1 text-gray-600">
+                    Password Strength:{" "}
+                    {renderStrengthMessage(calculateStrength(password))}
+                  </div>
                 )}
               </div>
             </div>
@@ -147,7 +168,7 @@ const Singup = () => {
                   htmlFor="file-input"
                   className="ml-5 flex items-center justify-center px-4 py-2 border border-gray-300 rounded-md shadow-sm text-sm font-medium text-gray-700 bg-white hover:bg-gray-50"
                 >
-                  <span>Upload a file</span>
+                  <span>Upload a file (50KB)</span>
                   <input
                     type="file"
                     name="avatar"
