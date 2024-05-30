@@ -10,7 +10,7 @@ Welcome to TasteHub, a cutting-edge multi-vendor food ordering platform built on
 - [Usage](#usage)
 - [Technologies](#technologies)
 - [Admin Dashboard](#admin-dashboard)
-- 
+  
 ## Features
 
 ### For Users
