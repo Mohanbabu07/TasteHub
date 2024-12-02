@@ -10,17 +10,17 @@ User Roles and Permissions
 - Update profile information.
 - Access personal order history on the dashboard.
 ## Vendor (Seller):
-Create and manage products.
-Create promotional events.
-Manage user orders for their products.
+- Create and manage products.
+- Create events.
+- Manage user orders for their products.
 ## Admin:
-Manage both users and vendors.
-Oversee and maintain the platform.
+- Manage both users and vendors.
+- Oversee and maintain the platform.
 ## Authentication and Security
 Password Hashing: User passwords are securely hashed using bcrypt.
 ## JWT Tokens:
-Used for account activation links.
-Ensure secure API communication and session management.
+- Used for account activation links.
+- Ensure secure API communication and session management.
 
 ## Table of Contents
 
