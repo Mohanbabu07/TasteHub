@@ -1,7 +1,26 @@
 
 # TasteHub - Multi-Vendor Food Order Platform
 
-Welcome to TasteHub, a cutting-edge multi-vendor food ordering platform built on the MERN stack. Discover a variety of cuisines, order from your favorite local and international vendors, and enjoy a seamless and convenient food ordering experience.
+Welcome to TasteHub, TasteHub is a full-stack multi-vendor food ordering platform built on the MERN stack. It implements Role-Based Access Control (RBAC) to provide tailored features and access for different types of users: User, Vendor, and Admin. The platform includes secure authentication using bcrypt for password hashing and JWT for user account activation.
+
+## Features
+User Roles and Permissions
+## User:
+View and track orders.
+Update profile information.
+Access personal order history on the dashboard.
+## Vendor (Seller):
+Create and manage products.
+Create promotional events.
+Manage user orders for their products.
+## Admin:
+Manage both users and vendors.
+Oversee and maintain the platform.
+## Authentication and Security
+Password Hashing: User passwords are securely hashed using bcrypt.
+## JWT Tokens:
+Used for account activation links.
+Ensure secure API communication and session management.
 
 ## Table of Contents
 
