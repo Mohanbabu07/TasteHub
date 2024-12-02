@@ -6,9 +6,9 @@ Welcome to TasteHub, TasteHub is a full-stack multi-vendor food ordering platfor
 ## Features
 User Roles and Permissions
 ## User:
-View and track orders.
-Update profile information.
-Access personal order history on the dashboard.
+- View and track orders.
+- Update profile information.
+- Access personal order history on the dashboard.
 ## Vendor (Seller):
 Create and manage products.
 Create promotional events.
